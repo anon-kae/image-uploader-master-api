@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "API for upload image",
   "main": "src/index.js",
   "scripts": {
     "start": "node .",
