@@ -7,8 +7,8 @@ const helmet = require('helmet');
 const config = require('./configs');
 const morgan = require('./configs/morgan');
 const { errorHandler } = require('./middlewares/error');
+const { WHITELIST_ORIGINS } = require('./utils/constants/global');
 
-const { constants } = config;
 const app = express();
 
 if (config.env !== 'test') {
@@ -32,7 +32,7 @@ app.use(compression());
 
 // set security cors
 app.use(cors({
-  origin: constants.whitelistOrigins,
+  origin: WHITELIST_ORIGINS,
   credentials: true,
 }));
 
